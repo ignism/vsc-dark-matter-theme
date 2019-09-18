@@ -13,7 +13,7 @@ var ui = {
   border: "#323639",
   selection: '#96CBFE',
   accent: '#96CBFE',
-  cursor: '#9FFF60',
+  cursor: '#F9EE98',
   red: '#CC6666',
   green: '#9ee465',
   blue: '#96CBFE',

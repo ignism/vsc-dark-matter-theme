@@ -126,7 +126,7 @@ var colors = {
     "notificationCenterHeader.background": template.ui.background.tint3,
     "notificationCenterHeader.foreground": template.ui.foreground.tint1,
     "notificationCenterHeader.border": template.ui.border,
-		"panel.background": template.ui.background.tint2,
+		"panel.background": template.ui.background.tint3,
 		"panel.border": template.ui.border,
 		"panel.dropBackground": color.opacity(template.ui.selection, 40),
 		"panelTitle.activeBorder": template.ui.transparent,
@@ -195,7 +195,8 @@ var colors = {
 		"tab.unfocusedActiveBackground": template.ui.background.tint2,
 		"tab.unfocusedActiveModifiedBorder": template.ui.foreground.tint2,
 		"tab.unfocusedInactiveForeground": template.ui.foreground.tint2,
-		"tab.unfocusedInactiveModifiedBorder": template.ui.foreground.tint2,
+    "tab.unfocusedInactiveModifiedBorder": template.ui.foreground.tint2,
+    //
 		"terminal.ansiBlack": "#000000",
 		"terminal.ansiBlue": template.ui.blue,
 		"terminal.ansiBrightBlack": template.ui.foreground.tint3,
@@ -213,7 +214,8 @@ var colors = {
 		"terminal.ansiWhite": "#ffffff",
 		"terminal.ansiYellow": template.ui.yellow,
 		"terminalCursor.background": "#000000",
-		"terminalCursor.foreground": template.ui.cursor,
+    "terminalCursor.foreground": template.ui.cursor,
+    //
 		"textLink.activeForeground": template.ui.foreground.tint1,
 		"textLink.foreground": template.ui.accent,
 		"titleBar.activeBackground": template.ui.background.tint1,
