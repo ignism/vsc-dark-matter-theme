@@ -1,0 +1,25 @@
+{
+    "name": "dark-matter",
+    "displayName": "Dark Matter",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "scripts": {
+      "build": "node ./src/build.js",
+      "copy": "cp ./build/theme.json ~/.vscode/extensions/dark-matter/build/theme.json"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Dark Matter",
+                "uiTheme": "vs-dark",
+                "path": "./build/theme.json"
+            }
+        ]
+    }
+}
