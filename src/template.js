@@ -10,6 +10,7 @@ var ui = {
     tint3: '#32363c',
   },
   transparent: '#00000000',
+  darken: '#00000048',
   border: "#323639",
   selection: '#96CBFE',
   accent: '#96CBFE',
