@@ -2,91 +2,94 @@ var color = require('./color');
 var template = require('./template');
 
 var colors = {
-		"activityBar.background": template.ui.background.tint1,
+		"activityBar.background": template.ui.background.tint2,
 		"activityBar.border": template.ui.border,
 		"activityBar.foreground": template.ui.foreground.tint1,
-		"activityBarBadge.background": template.ui.accent,
-    "activityBarBadge.foreground": "#000000",
+		"activityBarBadge.background": template.ui.selection,
+    "activityBarBadge.foreground": "#ffffff",
     "activityBar.dropBackground": "#ffffff1f",
 		"activityBar.inactiveForeground": template.ui.foreground.tint3,
-		"badge.background": template.ui.accent,
-		"badge.foreground": "#000000",
+		"badge.background": template.ui.selection,
+    "badge.foreground": "#ffffff",
+    //
 		"breadcrumb.activeSelectionForeground": template.ui.accent,
 		"breadcrumb.background": template.ui.background.tint3,
 		"breadcrumb.focusForeground": template.ui.foreground.tint1,
-		"breadcrumb.foreground": template.ui.foreground.tint2,
-		"breadcrumbPicker.background": template.ui.background.tint3,
-    "button.background": template.ui.accent,
-    "button.foreground": "#000000",
-		"button.hoverBackground": template.ui.foreground.tint1,
+		"breadcrumb.foreground": template.ui.foreground.tint3,
+    "breadcrumbPicker.background": template.ui.background.tint3,
+    //
+    "button.background": template.ui.button,
+    "button.foreground": "#ffffff",
+		"button.hoverBackground": template.ui.selection,
 		"debugToolBar.background": template.ui.background.tint3,
 		"diffEditor.insertedTextBackground": color.opacity(template.ui.green, 15),
 		"diffEditor.removedTextBackground": color.opacity(template.ui.red, 20),
-		"dropdown.background": template.ui.background.tint1,
+		"dropdown.background": template.ui.background.tint2,
 		"dropdown.border": template.ui.border,
-		"editor.background": template.ui.background.tint2,
+		"editor.background": template.ui.background.tint1,
 		"editor.findMatchBackground": "#000000",
 		"editor.findMatchBorder": template.ui.accent,
 		"editor.findMatchHighlightBackground": color.opacity(template.ui.selection, 40),
 		"editor.findMatchHighlightBorder": template.ui.selection,
 		"editor.foreground": template.ui.foreground.tint1,
-		"editor.lineHighlightBackground": "#00000048",
+		"editor.lineHighlightBackground": template.ui.darken,
 		"editor.selectionBackground": color.opacity(template.ui.selection, 40),
-		"editor.selectionHighlightBackground": color.opacity(template.ui.cursor, 20),
-		"editorBracketMatch.background": template.ui.background.tint2,
-		"editorBracketMatch.border": color.opacity(template.ui.cursor, 50),
+		"editor.selectionHighlightBackground": color.opacity(template.ui.cursor, 40),
+		"editorBracketMatch.background": color.opacity(template.ui.cursor, 40),
+		"editorBracketMatch.border": color.opacity(template.ui.cursor, 40),
     "editorCursor.foreground": template.ui.cursor,
     "editorCodeLens.foreground": template.ui.foreground.tint3,
 		"editorError.foreground": color.opacity(template.ui.red, 70),
 		"editorGroup.border": template.ui.border,
     "editorGroup.dropBackground": color.opacity(template.ui.selection, 40),
-    "editorGroupHeader.tabsBackground": template.ui.background.tint1,
+    "editorGroupHeader.tabsBackground": template.ui.background.tint3,
     "editorGroupHeader.tabsBorder": template.ui.border,
+    "editorGutter.background": template.ui.gutter,
 		"editorGutter.addedBackground": color.opacity(template.ui.green, 60),
 		"editorGutter.deletedBackground": color.opacity(template.ui.red, 60),
 		"editorGutter.modifiedBackground": color.opacity(template.ui.blue, 60),
 		"editorHoverWidget.background": template.ui.background.tint3,
-    "editorHoverWidget.border": template.ui.darken,
-    "editor.hoverHighlightBackground": color.opacity(template.ui.selection, 40),
+    "editorHoverWidget.border": template.ui.border,
+    "editor.hoverHighlightBackground": color.opacity(template.ui.cursor, 40),
 		"editorIndentGuide.activeBackground": template.ui.background.tint3,
 		"editorIndentGuide.background": color.opacity(template.ui.background.tint3, 70),
 		"editorInfo.foreground": color.opacity(template.ui.blue, 70),
 		"editorLineNumber.activeForeground": "#ffffff",
 		"editorLineNumber.foreground": template.ui.foreground.tint3,
-		"editorLink.activeForeground": template.ui.foreground.tint1,
+		"editorLink.activeForeground": template.ui.accent,
 		"editorMarkerNavigation.background": color.opacity(template.ui.foreground.tint1, 05),
 		"editorOverviewRuler.border": template.ui.transparent,
 		"editorOverviewRuler.errorForeground": color.opacity(template.ui.red, 40),
-		"editorOverviewRuler.findMatchForeground": template.ui.accent,
+		"editorOverviewRuler.findMatchForeground": "#ffffff",
 		"editorOverviewRuler.infoForeground": color.opacity(template.ui.blue, 40),
 		"editorOverviewRuler.warningForeground": color.opacity(template.ui.yellow, 40),
 		"editorRuler.foreground": template.ui.background.tint3,
 		"editorSuggestWidget.background": template.ui.background.tint3,
-		"editorSuggestWidget.border": template.ui.darken,
+		"editorSuggestWidget.border": template.ui.border,
 		"editorSuggestWidget.foreground": template.ui.foreground.tint1,
-		"editorSuggestWidget.highlightForeground": template.ui.accent,
-		"editorSuggestWidget.selectedBackground": color.opacity(template.ui.selection, 40),
+		"editorSuggestWidget.highlightForeground": "#ffffff",
+		"editorSuggestWidget.selectedBackground": template.ui.selection,
 		"editorWarning.foreground": color.opacity(template.ui.yellow, 70),
 		"editorWhitespace.foreground": color.opacity(template.ui.foreground.tint1, 40),
 		"editorWidget.background": template.ui.background.tint3,
 		"editorWidget.border": template.ui.darken,
 		"editorWidget.resizeBorder": template.ui.accent,
-		"extensionButton.prominentBackground": template.ui.accent,
-    "extensionButton.prominentHoverBackground": template.ui.foreground.tint1,
-		"extensionButton.prominentForeground": "#000000",
-    "extensionBadge.remoteBackground": template.ui.accent,
-		"extensionBadge.remoteForeground": "#000000",
+		"extensionButton.prominentBackground": template.ui.button,
+    "extensionButton.prominentHoverBackground": template.ui.selection,
+		"extensionButton.prominentForeground": "#ffffff",
+    "extensionBadge.remoteBackground": template.ui.selection,
+		"extensionBadge.remoteForeground": "#ffffff",
 		"focusBorder": template.ui.transparent,
-		"gitDecoration.conflictingResourceForeground": color.opacity(template.ui.yellow, 90),
-		"gitDecoration.deletedResourceForeground": color.opacity(template.ui.red, 90),
-		"gitDecoration.ignoredResourceForeground": color.opacity(template.ui.foreground.tint2, 90),
-		"gitDecoration.modifiedResourceForeground": color.opacity(template.ui.blue, 90),
-		"gitDecoration.untrackedResourceForeground": color.opacity(template.ui.green, 90),
-		"input.background": template.ui.background.tint2,
+		"gitDecoration.conflictingResourceForeground": template.ui.yellow,
+		"gitDecoration.deletedResourceForeground": template.ui.red,
+		"gitDecoration.ignoredResourceForeground": template.ui.foreground.tint3,
+		"gitDecoration.modifiedResourceForeground": template.ui.blue,
+		"gitDecoration.untrackedResourceForeground": template.ui.green,
+		"input.background": template.ui.button,
 		"input.border": template.ui.transparent,
 		"input.foreground": template.ui.foreground.tint1,
 		"input.placeholderForeground": color.opacity(template.ui.foreground.tint1, 60),
-		"inputOption.activeBackground": color.opacity(template.ui.selection, 40),
+		"inputOption.activeBackground": template.ui.selection,
 		"inputOption.activeBorder": template.ui.selection,
 		"inputValidation.errorBackground": template.ui.red,
 		"inputValidation.errorForeground": "#ffffff",
@@ -97,14 +100,14 @@ var colors = {
 		"inputValidation.warningBackground": template.ui.yellow,
 		"inputValidation.warningForeground": "#ffffff",
 		"inputValidation.warningBorder": template.ui.yellow,
-		"list.activeSelectionBackground": color.opacity(template.ui.selection, 40),
-		"list.activeSelectionForeground": template.ui.accent,
-		"list.focusBackground": color.opacity(template.ui.selection, 40),
-		"list.focusForeground": template.ui.accent,
-		"list.highlightForeground": template.ui.accent,
+		"list.activeSelectionBackground": template.ui.selection,
+		"list.activeSelectionForeground": "#ffffff",
+		"list.focusBackground": template.ui.selection,
+		"list.focusForeground": "#ffffff",
+		"list.highlightForeground": "#ffffff",
 		"list.hoverBackground": template.ui.transparent,
-		"list.hoverForeground": template.ui.foreground.tint1,
-		"list.inactiveSelectionBackground": template.ui.transparent,
+		"list.hoverForeground": "#ffffff",
+		"list.inactiveSelectionBackground": template.ui.lighten,
 		"list.inactiveSelectionForeground": "#ffffff",
 		"listFilterWidget.background": color.opacity(template.ui.selection, 40),
 		"listFilterWidget.noMatchesOutline": "#00000030",
@@ -119,18 +122,21 @@ var colors = {
 		"menubar.selectionBorder": "#00000030",
     "menubar.selectionForeground": template.ui.accent,
     "minimap.findMatchHighlight": template.ui.selection,
+    //
 		"notificationLink.foreground": template.ui.accent,
-		"notifications.background": template.ui.darken,
-    "notifications.foreground": template.ui.foreground.tint2,
-    "notifications.border": template.ui.darken,
-    "notificationCenterHeader.background": template.ui.darken,
-    "notificationCenterHeader.foreground": template.ui.foreground.tint3,
-    "notificationCenterHeader.border": template.ui.darken,
+		"notifications.background": template.ui.button,
+    "notifications.foreground": "#ffffff",
+    "notifications.border": template.ui.button,
+    "notificationCenterHeader.background": template.ui.accent,
+    "notificationCenterHeader.foreground": template.ui.foreground.tint1,
+    "notificationCenterHeader.border": template.ui.button,
+    //
 		"panel.background": template.ui.background.tint3,
 		"panel.border": template.ui.border,
 		"panel.dropBackground": color.opacity(template.ui.selection, 40),
+		"panelTitle.background": template.ui.background.tint3,
 		"panelTitle.activeBorder": template.ui.transparent,
-		"panelTitle.activeForeground": "#ffffff",
+		"panelTitle.activeForeground": template.ui.selection,
     "panelTitle.inactiveForeground": template.ui.foreground.tint2,
     //
 		"peekView.border": template.ui.border,
@@ -145,51 +151,62 @@ var colors = {
     "peekViewTitleDescription.foreground": template.ui.foreground.tint2,
     //
     "pickerGroup.border": template.ui.border,
-		"pickerGroup.foreground": template.ui.accent,
-    "progressBar.background": template.ui.accent,
+		"pickerGroup.foreground": "#ffffff",
+    "progressBar.background": template.ui.selection,
     "quickInput.background": template.ui.background.tint3,
-		"quickInput.foreground": template.ui.foreground.tint2,
+		"quickInput.foreground": template.ui.foreground.tint1,
 		"scrollbar.shadow": template.ui.transparent,
-		"scrollbarSlider.activeBackground": color.opacity(template.ui.accent, 50),
-		"scrollbarSlider.background": "#00000048",
+		"scrollbarSlider.activeBackground": template.ui.lighten,
+		"scrollbarSlider.background": template.ui.darken,
 		// "scrollbarSlider.background": color.opacity(template.ui.foreground.tint1, 20),
-		"scrollbarSlider.hoverBackground": "#00000048",
+		"scrollbarSlider.hoverBackground": template.ui.darken,
 		// "scrollbarSlider.hoverBackground": color.opacity(template.ui.foreground.tint1, 20),
-		"selection.background": template.ui.accent,
-		"settings.checkboxBackground": template.ui.background.tint1,
+    "selection.background": template.ui.selection,
+    //
+		"settings.headerForeground": "#ffffff",
+		"settings.checkboxBackground": template.ui.background.tint2,
 		"settings.checkboxForeground": template.ui.foreground.tint1,
-		"settings.dropdownBackground": template.ui.background.tint1,
+    "settings.checkboxBorder": template.ui.button,
+		"settings.dropdownBackground": template.ui.background.tint2,
 		"settings.dropdownForeground": template.ui.foreground.tint1,
-		"settings.headerForeground": template.ui.accent,
-		"settings.modifiedItemIndicator": template.ui.accent,
-		"settings.numberInputBackground": template.ui.background.tint1,
+		"settings.dropdownBorder": template.ui.button,
+		"settings.dropdownListBorder": "#ffffff",
+		"settings.numberInputBackground": template.ui.background.tint2,
 		"settings.numberInputForeground": template.ui.foreground.tint1,
-		"settings.textInputBackground": template.ui.background.tint1,
-		"settings.textInputForeground": template.ui.foreground.tint1,
-		"sideBar.background": template.ui.background.tint1,
+		"settings.numberInputBorder": template.ui.button,
+		"settings.textInputBackground": template.ui.background.tint2,
+    "settings.textInputForeground": template.ui.foreground.tint1,
+		"settings.textInputBorder": template.ui.button,
+		"settings.modifiedItemIndicator": template.ui.accent,
+    //
+		"sideBar.background": template.ui.background.tint2,
 		"sideBar.border": template.ui.border,
     "sideBar.foreground": template.ui.foreground.tint2,
     "sideBar.dropBackground": color.opacity(template.ui.selection, 40),
-		"sideBarSectionHeader.foreground": template.ui.foreground.tint2,
-		"sideBarSectionHeader.background": template.ui.background.tint1,
-		"sideBarSectionHeader.border": template.ui.border,
-		"sideBarTitle.foreground": template.ui.foreground.tint1,
+		"sideBarSectionHeader.foreground": template.ui.foreground.tint3,
+		"sideBarSectionHeader.background": template.ui.background.tint2,
+		"sideBarSectionHeader.border": template.ui.transparent,
+    "sideBarTitle.foreground": template.ui.foreground.tint1,
+    //
 		"statusBar.background": template.ui.background.tint3,
 		"statusBar.border": template.ui.border,
-		"statusBar.debuggingBackground": template.color.purple,
+		"statusBar.debuggingBackground": template.color.orange,
 		"statusBar.debuggingForeground": "#ffffff",
 		"statusBar.foreground": template.ui.foreground.tint2,
-    "statusBar.noFolderBackground": color.opacity(template.ui.accent, 40),
-    "statusBar.noFolderForeground": template.ui.foreground.tint2,
+    "statusBar.noFolderBackground": template.ui.selection,
+    "statusBar.noFolderForeground": "#ffffff",
 		"statusBarItem.hoverBackground": template.ui.transparent,
-		"statusBarItem.remoteBackground": template.ui.accent,
-		"statusBarItem.remoteForeground": "#000000",
-		// "tab.activeBorder": template.ui.border,
+		"statusBarItem.remoteBackground": template.ui.selection,
+    "statusBarItem.remoteForeground": "#ffffff",
+    //
+		"tab.activeBorder": "#ffffff40",//template.ui.border,
     "tab.activeForeground": "#ffffff",
-    "tab.activeBackground": template.ui.background.tint3,
-		"tab.activeModifiedBorder": template.ui.foreground.tint2,
+    "tab.activeBackground": template.ui.selection,
+		"tab.activeModifiedBorder": template.ui.accent,
     "tab.border": template.ui.border,
-		"tab.inactiveBackground": template.ui.background.tint1,
+    // "tab.hoverBackground": template.ui.transparent,
+    "tab.hoverBorder": template.ui.border,
+		"tab.inactiveBackground": template.ui.background.tint3,
 		"tab.inactiveForeground": template.ui.foreground.tint2,
     "tab.inactiveModifiedBorder": template.ui.foreground.tint2,
 		"tab.unfocusedActiveBorder": template.ui.background.tint2,
@@ -219,14 +236,15 @@ var colors = {
     "terminalCursor.foreground": template.ui.cursor,
     //
 		"textLink.activeForeground": template.ui.foreground.tint1,
-		"textLink.foreground": template.ui.accent,
-		"titleBar.activeBackground": template.ui.background.tint1,
+    "textLink.foreground": template.ui.accent,
+    "textCodeBlock.background": template.ui.background.tint1,
+		"titleBar.activeBackground": template.ui.background.tint2,
 		"titleBar.activeForeground": template.ui.foreground.tint1,
 		"titleBar.border": template.ui.border,
-		"titleBar.inactiveBackground": template.ui.background.tint1,
+		"titleBar.inactiveBackground": template.ui.background.tint2,
 		"titleBar.inactiveForeground": template.ui.foreground.tint2,
     "tree.indentGuidesStroke": template.ui.background.tint3,
-    "welcomePage.background": template.ui.background.tint2,
+    "welcomePage.background": template.ui.background.tint1,
     "widget.shadow": "#00000020",
     //
 		// "checkbox.background": template.ui.background.tint2,
@@ -306,11 +324,7 @@ var colors = {
 		// "peekViewTitleLabel.foreground": "#ffffff",
 		// "pickerGroup.border": "#3f3f46",
 
-		// "settings.checkboxBorder": "#ffffff10",
-		// "settings.dropdownBorder": "#ffffff10",
-		// "settings.dropdownListBorder": "#ff00ff",
-		// "settings.numberInputBorder": "#ffffff10",
-		// "settings.textInputBorder": "#ffffff10",
+
 
 		// "statusBar.debuggingBorder": template.ui.border,
 		// "statusBar.noFolderBorder": template.ui.border,
@@ -327,421 +341,549 @@ var colors = {
 		// "terminal.selectionBackground": "#ffffff40",
 		// "textBlockQuote.background": "#7f7f7f1a",
 		// "textBlockQuote.border": "#007acc80",
-		// "textCodeBlock.background": "#0a0a0a66",
 		// "textPreformat.foreground": "#d7ba7d",
 		// "textSeparator.foreground": "#ffffff2e"
   }
 
   var tokenColors = [
-		{
-			"name": "Invisible",
-			"scope": "invisible",
-			"settings": {
-				"foreground": "#c5c8c6"
-			}
-		},
-		{
-			"name": "Comment",
+    {
+      "name": "Comment",
 			"scope": "comment",
 			"settings": {
-				"foreground": "#7C7C7C"
+				"foreground": template.color.grey
 			}
-		},
-		{
-			"name": "Entity",
-			"scope": "entity",
-			"settings": {
-				"foreground": "#FFD2A7"
-			}
-		},
-		{
-			"name": "Entity Name Type",
-			"scope": "entity.name.type",
-			"settings": {
-				"foreground": template.color.orange,
-			}
-		},
-		{
-			"name": "Entity Inherited Class",
-			"scope": "entity.other.inherited-class",
-			"settings": {
-				"foreground": "#9B5C2E"
-			}
-		},
-		{
-			"name": "Keyword",
-			"scope": "keyword",
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"name": "Keyword Control",
-			"scope": "keyword.control",
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"name": "Keyword Operator",
-			"scope": "keyword.operator",
-			"settings": {
-				"foreground": "#EDEDED"
-			}
-		},
-		{
-			"name": "Storage",
-			"scope": "storage",
-			"settings": {
-				"foreground": "#CFCB90"
-			}
-		},
-		{
-			"name": "Storage Modifier",
-			"scope": "storage.modifier",
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"name": "Constant",
+    },
+    {
+      "name": "Constant",
 			"scope": "constant",
 			"settings": {
-				"foreground": "#99CC99"
+				"foreground": template.color.pink
 			}
-		},
-		{
-			"name": "Constant Numeric",
-			"scope": "constant.numeric",
+    },
+    {
+      "name": "Entity",
+			"scope": "entity",
 			"settings": {
-				"foreground": "#FF73FD"
+				"foreground": template.color.orange
 			}
-		},
-		{
-			"name": "Variable",
-			"scope": "variable",
+    },
+    {
+      "name": "Entity Name",
+      "scope": ["entity.name.function", "entity.name.tag"],
 			"settings": {
-				"foreground": "#C6C5FE"
+				"foreground": template.color.purple
 			}
-		},
-		{
-			"name": "Invalid Deprecated",
-			"scope": "invalid.deprecated",
+    },
+    {
+      "name": "Entity Inherited Class",
+			"scope": "entity.other.inherited-class",
 			"settings": {
-				"foreground": "#FD5FF1",
-				"fontStyle": "underline"
+				"foreground": template.color.orangeDark
 			}
-		},
-		{
-			"name": "Invalid Illegal",
-			"scope": "invalid.illegal",
-			"settings": {
-				"foreground": "#FD5FF1",
-				"background": "#A95AA9"
-			}
-		},
-		{
-			"name": "Invalid Illegal",
-			"scope": "invalid.illegal",
-			"settings": {
-				"foreground": "#FD5FF1",
-				"background": "#A95AA9"
-			}
-		},
-		{
-			"name": "String Source, Source String Meta Embedded",
-			"scope": [
-				"source string source",
-				"source string meta.embedded.line"
-			],
-			"settings": {
-				"foreground": "#EDEDED"
-			}
-		},
-		{
-			"name": "String Source Punctuation",
-			"scope": "source string punctuation.section.embedded",
-			"settings": {
-				"foreground": "#00A0A0"
-			}
-		},
-		{
-			"name": "String Source Punctuation Source",
-			"scope": "source string punctuation.section.embedded source",
-			"settings": {
-				"foreground": "#00A0A0"
-			}
-		},
-		{
-			"name": "String",
-			"scope": "string",
-			"settings": {
-				"foreground": "#A8FF60"
-			}
-		},
-		{
-			"name": "String Constant",
-			"scope": "string constant",
-			"settings": {
-				"foreground": "#00A0A0"
-			}
-		},
-		{
-			"name": "String Regexp",
-			"scope": "string.regexp",
-			"settings": {
-				"foreground": "#E9C062"
-			}
-		},
-		{
-			"name": "String Regexp Exscaped or Embedded",
-			"scope": [
-				"string.regexp constant.character.escape",
-				"string.regexp source.ruby.embedded",
-				"string.regexp string.regexp.arbitrary-repitition"
-			],
-			"settings": {
-				"foreground": "#FF8000"
-			}
-		},
-		{
-			"name": "String Regexp Group",
-			"scope": "string.regexp.group",
-			"settings": {
-				"foreground": "#C6A24F",
-				"background": "#595f65"
-			}
-		},
-		{
-			"name": "String Regexp Character-Class",
-			"scope": "string.regexp.character-class",
-			"settings": {
-				"foreground": "#B18A3D"
-			}
-		},
-		{
-			"name": "String Variable",
-			"scope": "string variable",
-			"settings": {
-				"foreground": "#8A9A95"
-			}
-		},
-		{
-			"name": "Support",
-			"scope": "support",
-			"settings": {
-				"foreground": "#FFFFB6"
-			}
-		},
-		{
-			"name": "Support Function",
-			"scope": "support.function",
-			"settings": {
-				"foreground": "#DAD085"
-			}
-		},
-		{
-			"name": "Support Constant",
-			"scope": "support.constant",
-			"settings": {
-				"foreground": "#FFD2A7"
-			}
-		},
-		{
-			"name": "Support Type Property-Name CSS",
-			"scope": "support.type.property-name.css",
-			"settings": {
-				"foreground": "#EDEDED"
-			}
-		},
-		{
-			"name": "Source Tags",
-			"scope": [
-				"source .entity.name.tag",
-				"source .entity.other.attribute-name",
-				"meta.tag.inline",
-				"meta.tag.inline .entity"
-			],
-			"settings": {
-				"foreground": "#96CBFE"
-			}
-		},
-		{
-			"name": "Source Tag Attribute Name",
+    },
+    {
+      "name": "Entity Inherited Class",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#FFD7B1"
+				"foreground": template.color.brightBlue
 			}
-		},
-		{
-			"name": "Source Tag and Attribute Namespace",
-			"scope": [
-				"entity.name.tag.namespace",
-				"entity.other.attribute-name.namespace"
-			],
+    },
+    {
+      "name": "Invalid",
+			"scope": "invalid",
 			"settings": {
-				"foreground": "#E18964"
+				"foreground": template.color.orange
 			}
-		},
-		{
-			"name": "C Preprocessor",
-			"scope": "meta.preprocessor.c",
+    },
+    {
+      "name": "Keyword",
+			"scope": "keyword",
 			"settings": {
-				"foreground": "#8996A8"
+				"foreground": template.color.yellow
 			}
-		},
-		{
-			"name": "C Preprocessor Keyword",
-			"scope": "meta.preprocessor.c keyword",
+    },
+    {
+      "name": "Markup",
+			"scope": "markup",
 			"settings": {
-				"foreground": "#AFC4DB"
+				"foreground": template.color.grey
 			}
-		},
-		{
-			"name": "Cast",
-			"scope": "meta.cast",
+    },
+    {
+      "name": "Meta",
+			"scope": "meta",
 			"settings": {
-				"foreground": "#676767"
+				"foreground": template.color.white
 			}
-		},
-		{
-			"name": "Doctype",
-			"scope": [
-				"meta.sgml.html meta.doctype",
-				".meta.sgml.html meta.doctype entity",
-				"meta.sgml.html meta.doctype string",
-				"meta.xml-processing",
-				"meta.xml-processing entity",
-				"meta.xml-processing string"
-			],
+    },
+    {
+      "name": "Storage",
+			"scope": "storage",
 			"settings": {
-				"foreground": "#494949"
+				"foreground": template.color.red
 			}
-		},
-		{
-			"name": "Meta Tag, Entity",
-			"scope": [
-				"meta.tag",
-				"meta.tag .entity"
-			],
+    },
+    {
+      "name": "String",
+			"scope": "string",
 			"settings": {
-				"foreground": "#96CBFE"
+				"foreground": template.color.green
 			}
-		},
-		{
-			"name": "Selector CSS Entiry Name Tag",
-			"scope": "meta.selector.css entity.name.tag",
+    },
+    {
+      "name": "Support",
+			"scope": "support",
 			"settings": {
-				"foreground": "#96CBFE",
-				"fontStyle": "underline"
+				"foreground": template.color.yellow
 			}
-		},
-		{
-			"name": "Selector CSS Pseudo-Class",
-			"scope": "meta.selector.css entity.other.attribute-name.pseudo-class",
+    },
+    {
+      "name": "Support",
+			"scope": "support.function",
 			"settings": {
-				"foreground": "#8F9D6A"
+				"foreground": template.color.teal
 			}
-		},
-		{
-			"name": "Selector CSS ID",
-			"scope": "meta.selector.css entity.other.attribute-name.id",
+    },
+    {
+      "name": "Support",
+			"scope": "support.constant",
 			"settings": {
-				"foreground": "#8B98AB"
+				"foreground": template.color.teal
 			}
-		},
-		{
-			"name": "Selector CSS Class",
-			"scope": "meta.selector.css entity.other.attribute-name.class",
+    },
+    {
+      "name": "Variable",
+			"scope": "variable",
 			"settings": {
-				"foreground": "#62B1FE"
+				"foreground": template.color.blue
 			}
-		},
-		{
-			"name": "Selector CSS punctuation",
-			"scope": "meta.selector.css entity.other.attribute-name punctuation",
+    },
+    {
+      "name": "Variable Language",
+			"scope": "variable.language",
 			"settings": {
-				"foreground": "#FFD2A7"
+				"foreground": template.color.yellowDark
 			}
-		},
-		{
-			"name": "Selector CSS Support Constant Property Value",
-			"scope": [
-				"meta.property-group support.constant.property-value.css",
-				"meta.property-value support.constant.property-value.css"
-			],
+    },
+    {
+      "name": "Variable Parameter",
+			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#F9EE98"
+				"foreground": template.color.brightBlue
 			}
-		},
-		{
-			"name": "Preprocessor At-Rule Keword Control",
-			"scope": "meta.preprocessor.at-rule keyword.control.at-rule",
-			"settings": {
-				"foreground": "#8693A5"
-			}
-		},
-		{
-			"name": "CSS Property value Support Constant, Named Color",
-			"scope": [
-				"meta.property-value support.constant.color.css",
-				"meta.property-value constant"
-			],
-			"settings": {
-				"foreground": "#87C38A"
-			}
-		},
-		{
-			"name": "CSS Constructor Argument",
-			"scope": "meta.constructor.argument.css",
-			"settings": {
-				"foreground": "#8F9D6A"
-			}
-		},
-		{
-			"name": "Meta Diff, Diff Header",
-			"scope": [
-				"meta.diff",
-				"meta.diff.header"
-			],
-			"settings": {
-				"foreground": "#F8F8F8",
-				"background": "#0E2231"
-			}
-		},
-		{
-			"name": "Meta Separator",
-			"scope": "meta.separator",
-			"settings": {
-				"foreground": "#60A633",
-				"background": "#242424"
-			}
-		},
-		{
-			"scope": "token.info-token",
-			"settings": {
-				"foreground": "#6796e6"
-			}
-		},
-		{
-			"scope": "token.warn-token",
-			"settings": {
-				"foreground": "#cd9731"
-			}
-		},
-		{
-			"scope": "token.error-token",
-			"settings": {
-				"foreground": "#f44747"
-			}
-		},
-		{
-			"scope": "token.debug-token",
-			"settings": {
-				"foreground": "#b267e6"
-			}
-		}
-	]
+    },
+  ]
+
+  // var tokenColors = [
+	// 	{
+	// 		"name": "Invisible",
+	// 		"scope": "invisible",
+	// 		"settings": {
+	// 			"foreground": "#c5c8c6"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Comment",
+	// 		"scope": "comment",
+	// 		"settings": {
+	// 			"foreground": "#7C7C7C"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Entity",
+	// 		"scope": "entity",
+	// 		"settings": {
+	// 			"foreground": "#FFD2A7"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Entity Name Type",
+	// 		"scope": "entity.name.type",
+	// 		"settings": {
+	// 			"foreground": template.color.orange,
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Entity Inherited Class",
+	// 		"scope": "entity.other.inherited-class",
+	// 		"settings": {
+	// 			"foreground": "#9B5C2E"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Keyword",
+	// 		"scope": "keyword",
+	// 		"settings": {
+	// 			"foreground": "#96CBFE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Keyword Control",
+	// 		"scope": "keyword.control",
+	// 		"settings": {
+	// 			"foreground": "#96CBFE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Keyword Operator",
+	// 		"scope": "keyword.operator",
+	// 		"settings": {
+	// 			"foreground": "#EDEDED"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Storage",
+	// 		"scope": "storage",
+	// 		"settings": {
+	// 			"foreground": "#CFCB90"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Storage Modifier",
+	// 		"scope": "storage.modifier",
+	// 		"settings": {
+	// 			"foreground": "#96CBFE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Constant",
+	// 		"scope": "constant",
+	// 		"settings": {
+	// 			"foreground": "#99CC99"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Constant Numeric",
+	// 		"scope": "constant.numeric",
+	// 		"settings": {
+	// 			"foreground": "#FF73FD"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Variable",
+	// 		"scope": "variable",
+	// 		"settings": {
+	// 			"foreground": "#C6C5FE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Invalid Deprecated",
+	// 		"scope": "invalid.deprecated",
+	// 		"settings": {
+	// 			"foreground": "#FD5FF1",
+	// 			"fontStyle": "underline"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Invalid Illegal",
+	// 		"scope": "invalid.illegal",
+	// 		"settings": {
+	// 			"foreground": "#FD5FF1",
+	// 			"background": "#A95AA9"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Invalid Illegal",
+	// 		"scope": "invalid.illegal",
+	// 		"settings": {
+	// 			"foreground": "#FD5FF1",
+	// 			"background": "#A95AA9"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Source, Source String Meta Embedded",
+	// 		"scope": [
+	// 			"source string source",
+	// 			"source string meta.embedded.line"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#EDEDED"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Source Punctuation",
+	// 		"scope": "source string punctuation.section.embedded",
+	// 		"settings": {
+	// 			"foreground": "#00A0A0"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Source Punctuation Source",
+	// 		"scope": "source string punctuation.section.embedded source",
+	// 		"settings": {
+	// 			"foreground": "#00A0A0"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String",
+	// 		"scope": "string",
+	// 		"settings": {
+	// 			"foreground": "#A8FF60"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Constant",
+	// 		"scope": "string constant",
+	// 		"settings": {
+	// 			"foreground": "#00A0A0"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Regexp",
+	// 		"scope": "string.regexp",
+	// 		"settings": {
+	// 			"foreground": "#E9C062"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Regexp Exscaped or Embedded",
+	// 		"scope": [
+	// 			"string.regexp constant.character.escape",
+	// 			"string.regexp source.ruby.embedded",
+	// 			"string.regexp string.regexp.arbitrary-repitition"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#FF8000"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Regexp Group",
+	// 		"scope": "string.regexp.group",
+	// 		"settings": {
+	// 			"foreground": "#C6A24F",
+	// 			"background": "#595f65"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Regexp Character-Class",
+	// 		"scope": "string.regexp.character-class",
+	// 		"settings": {
+	// 			"foreground": "#B18A3D"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "String Variable",
+	// 		"scope": "string variable",
+	// 		"settings": {
+	// 			"foreground": "#8A9A95"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Support",
+	// 		"scope": "support",
+	// 		"settings": {
+	// 			"foreground": "#FFFFB6"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Support Function",
+	// 		"scope": "support.function",
+	// 		"settings": {
+	// 			"foreground": "#DAD085"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Support Constant",
+	// 		"scope": "support.constant",
+	// 		"settings": {
+	// 			"foreground": "#FFD2A7"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Support Type Property-Name CSS",
+	// 		"scope": "support.type.property-name.css",
+	// 		"settings": {
+	// 			"foreground": "#EDEDED"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Source Tags",
+	// 		"scope": [
+	// 			"source .entity.name.tag",
+	// 			"source .entity.other.attribute-name",
+	// 			"meta.tag.inline",
+	// 			"meta.tag.inline .entity"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#96CBFE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Source Tag Attribute Name",
+	// 		"scope": "entity.other.attribute-name",
+	// 		"settings": {
+	// 			"foreground": "#FFD7B1"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Source Tag and Attribute Namespace",
+	// 		"scope": [
+	// 			"entity.name.tag.namespace",
+	// 			"entity.other.attribute-name.namespace"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#E18964"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "C Preprocessor",
+	// 		"scope": "meta.preprocessor.c",
+	// 		"settings": {
+	// 			"foreground": "#8996A8"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "C Preprocessor Keyword",
+	// 		"scope": "meta.preprocessor.c keyword",
+	// 		"settings": {
+	// 			"foreground": "#AFC4DB"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Cast",
+	// 		"scope": "meta.cast",
+	// 		"settings": {
+	// 			"foreground": "#676767"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Doctype",
+	// 		"scope": [
+	// 			"meta.sgml.html meta.doctype",
+	// 			".meta.sgml.html meta.doctype entity",
+	// 			"meta.sgml.html meta.doctype string",
+	// 			"meta.xml-processing",
+	// 			"meta.xml-processing entity",
+	// 			"meta.xml-processing string"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#494949"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Meta Tag, Entity",
+	// 		"scope": [
+	// 			"meta.tag",
+	// 			"meta.tag .entity"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#96CBFE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS Entiry Name Tag",
+	// 		"scope": "meta.selector.css entity.name.tag",
+	// 		"settings": {
+	// 			"foreground": "#96CBFE",
+	// 			"fontStyle": "underline"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS Pseudo-Class",
+	// 		"scope": "meta.selector.css entity.other.attribute-name.pseudo-class",
+	// 		"settings": {
+	// 			"foreground": "#8F9D6A"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS ID",
+	// 		"scope": "meta.selector.css entity.other.attribute-name.id",
+	// 		"settings": {
+	// 			"foreground": "#8B98AB"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS Class",
+	// 		"scope": "meta.selector.css entity.other.attribute-name.class",
+	// 		"settings": {
+	// 			"foreground": "#62B1FE"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS punctuation",
+	// 		"scope": "meta.selector.css entity.other.attribute-name punctuation",
+	// 		"settings": {
+	// 			"foreground": "#FFD2A7"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Selector CSS Support Constant Property Value",
+	// 		"scope": [
+	// 			"meta.property-group support.constant.property-value.css",
+	// 			"meta.property-value support.constant.property-value.css"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#F9EE98"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Preprocessor At-Rule Keword Control",
+	// 		"scope": "meta.preprocessor.at-rule keyword.control.at-rule",
+	// 		"settings": {
+	// 			"foreground": "#8693A5"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "CSS Property value Support Constant, Named Color",
+	// 		"scope": [
+	// 			"meta.property-value support.constant.color.css",
+	// 			"meta.property-value constant"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#87C38A"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "CSS Constructor Argument",
+	// 		"scope": "meta.constructor.argument.css",
+	// 		"settings": {
+	// 			"foreground": "#8F9D6A"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Meta Diff, Diff Header",
+	// 		"scope": [
+	// 			"meta.diff",
+	// 			"meta.diff.header"
+	// 		],
+	// 		"settings": {
+	// 			"foreground": "#F8F8F8",
+	// 			"background": "#0E2231"
+	// 		}
+	// 	},
+	// 	{
+	// 		"name": "Meta Separator",
+	// 		"scope": "meta.separator",
+	// 		"settings": {
+	// 			"foreground": "#60A633",
+	// 			"background": "#242424"
+	// 		}
+	// 	},
+	// 	{
+	// 		"scope": "token.info-token",
+	// 		"settings": {
+	// 			"foreground": "#6796e6"
+	// 		}
+	// 	},
+	// 	{
+	// 		"scope": "token.warn-token",
+	// 		"settings": {
+	// 			"foreground": "#cd9731"
+	// 		}
+	// 	},
+	// 	{
+	// 		"scope": "token.error-token",
+	// 		"settings": {
+	// 			"foreground": "#f44747"
+	// 		}
+	// 	},
+	// 	{
+	// 		"scope": "token.debug-token",
+	// 		"settings": {
+	// 			"foreground": "#b267e6"
+	// 		}
+	// 	}
+	// ]
   
 // var tokenColors = [
 //   {
