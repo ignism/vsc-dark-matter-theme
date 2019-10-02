@@ -13,7 +13,7 @@ var colors = {
     "badge.foreground": "#ffffff",
     //
 		"breadcrumb.activeSelectionForeground": template.ui.accent,
-		"breadcrumb.background": template.ui.background.tint3,
+		"breadcrumb.background": template.ui.background.tint1,
 		"breadcrumb.focusForeground": template.ui.foreground.tint1,
 		"breadcrumb.foreground": template.ui.foreground.tint3,
     "breadcrumbPicker.background": template.ui.background.tint3,
@@ -42,7 +42,7 @@ var colors = {
 		"editorError.foreground": color.opacity(template.ui.red, 70),
 		"editorGroup.border": template.ui.border,
     "editorGroup.dropBackground": color.opacity(template.ui.selection, 40),
-    "editorGroupHeader.tabsBackground": template.ui.background.tint3,
+    "editorGroupHeader.tabsBackground": template.ui.background.tint1,
     "editorGroupHeader.tabsBorder": template.ui.border,
     "editorGutter.background": template.ui.gutter,
 		"editorGutter.addedBackground": color.opacity(template.ui.green, 60),
@@ -107,7 +107,7 @@ var colors = {
 		"list.highlightForeground": "#ffffff",
 		"list.hoverBackground": template.ui.transparent,
 		"list.hoverForeground": "#ffffff",
-		"list.inactiveSelectionBackground": template.ui.lighten,
+		"list.inactiveSelectionBackground": template.ui.background.tint1,
 		"list.inactiveSelectionForeground": "#ffffff",
 		"listFilterWidget.background": color.opacity(template.ui.selection, 40),
 		"listFilterWidget.noMatchesOutline": "#00000030",
@@ -136,7 +136,7 @@ var colors = {
 		"panel.dropBackground": color.opacity(template.ui.selection, 40),
 		"panelTitle.background": template.ui.background.tint3,
 		"panelTitle.activeBorder": template.ui.transparent,
-		"panelTitle.activeForeground": template.ui.selection,
+		"panelTitle.activeForeground": "#ffffff",
     "panelTitle.inactiveForeground": template.ui.foreground.tint2,
     //
 		"peekView.border": template.ui.border,
@@ -180,7 +180,7 @@ var colors = {
 		"settings.modifiedItemIndicator": template.ui.accent,
     //
 		"sideBar.background": template.ui.background.tint2,
-		"sideBar.border": template.ui.border,
+		"sideBar.border": template.ui.background.tint2,
     "sideBar.foreground": template.ui.foreground.tint2,
     "sideBar.dropBackground": color.opacity(template.ui.selection, 40),
 		"sideBarSectionHeader.foreground": template.ui.foreground.tint3,
@@ -206,7 +206,7 @@ var colors = {
     "tab.border": template.ui.border,
     // "tab.hoverBackground": template.ui.transparent,
     "tab.hoverBorder": template.ui.border,
-		"tab.inactiveBackground": template.ui.background.tint3,
+		"tab.inactiveBackground": template.ui.background.tint1,
 		"tab.inactiveForeground": template.ui.foreground.tint2,
     "tab.inactiveModifiedBorder": template.ui.foreground.tint2,
 		"tab.unfocusedActiveBorder": template.ui.background.tint2,
@@ -217,21 +217,21 @@ var colors = {
     "tab.unfocusedInactiveModifiedBorder": template.ui.foreground.tint2,
     //
 		"terminal.ansiBlack": "#000000",
-		"terminal.ansiBlue": template.ui.blue,
+		"terminal.ansiBlue": template.color.brightBlue,
 		"terminal.ansiBrightBlack": template.ui.foreground.tint3,
-		"terminal.ansiBrightBlue": template.ui.blue,
-		"terminal.ansiBrightCyan": template.ui.cyan,
-		"terminal.ansiBrightGreen": template.ui.green,
-		"terminal.ansiBrightMagenta": template.ui.purple,
-		"terminal.ansiBrightRed": template.ui.red,
+		"terminal.ansiBrightBlue": template.color.brightBlue,
+		"terminal.ansiBrightCyan": template.color.teal,
+		"terminal.ansiBrightGreen": template.color.green,
+		"terminal.ansiBrightMagenta": template.color.purple,
+		"terminal.ansiBrightRed": template.color.red,
 		"terminal.ansiBrightWhite": "#ffffff",
-		"terminal.ansiBrightYellow": template.ui.yellow,
-		"terminal.ansiCyan": template.ui.cyan,
-		"terminal.ansiGreen": template.ui.green,
-		"terminal.ansiMagenta": template.ui.purple,
-		"terminal.ansiRed": template.ui.red,
+		"terminal.ansiBrightYellow": template.color.orange,
+		"terminal.ansiCyan": template.color.teal,
+		"terminal.ansiGreen": template.color.green,
+		"terminal.ansiMagenta": template.color.purple,
+		"terminal.ansiRed": template.color.red,
 		"terminal.ansiWhite": "#ffffff",
-		"terminal.ansiYellow": template.ui.yellow,
+		"terminal.ansiYellow": template.color.orange,
 		"terminalCursor.background": "#000000",
     "terminalCursor.foreground": template.ui.cursor,
     //
@@ -355,9 +355,16 @@ var colors = {
     },
     {
       "name": "Constant",
-			"scope": "constant",
+			"scope": ["constant.numeric", "constant.character"],
 			"settings": {
 				"foreground": template.color.pink
+			}
+    },
+    {
+      "name": "Constant",
+			"scope": ["constant.language", "constant.other"],
+			"settings": {
+				"foreground": template.color.teal
 			}
     },
     {
@@ -385,7 +392,7 @@ var colors = {
       "name": "Entity Inherited Class",
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": template.color.brightBlue
+				"foreground": template.color.blue
 			}
     },
     {
@@ -441,7 +448,7 @@ var colors = {
       "name": "Support",
 			"scope": "support.function",
 			"settings": {
-				"foreground": template.color.teal
+				"foreground": template.color.purpleLight
 			}
     },
     {
@@ -455,7 +462,7 @@ var colors = {
       "name": "Variable",
 			"scope": "variable",
 			"settings": {
-				"foreground": template.color.blue
+				"foreground": template.color.white
 			}
     },
     {
@@ -469,7 +476,7 @@ var colors = {
       "name": "Variable Parameter",
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": template.color.brightBlue
+				"foreground": template.color.blue
 			}
     },
   ]
